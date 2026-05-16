@@ -79,7 +79,7 @@
                     <span class="text-4xl font-black text-gray-900">₹{{ number_format($product->discount_price, 2) }}</span>
                     <span class="text-lg text-gray-400 line-through mb-1">₹{{ number_format($product->price, 2) }}</span>
                     <span class="text-sm bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-lg mb-1">
-                        Save ${{ number_format($product->price - $product->discount_price, 2) }}
+                        Save ₹{{ number_format($product->price - $product->discount_price, 2) }}
                     </span>
                 @else
                     <span class="text-4xl font-black text-gray-900">₹{{ number_format($product->price, 2) }}</span>

@@ -141,7 +141,7 @@
                     <div>
                         @if($product->discount_price)
                             <span class="font-black text-gray-900">₹{{ number_format($product->discount_price, 2) }}</span>
-                            <span class="text-xs text-gray-400 line-through ml-1">${{ number_format($product->price, 2) }}</span>
+                            <span class="text-xs text-gray-400 line-through ml-1">₹{{ number_format($product->price, 2) }}</span>
                         @else
                             <span class="font-black text-gray-900">₹{{ number_format($product->price, 2) }}</span>
                         @endif
