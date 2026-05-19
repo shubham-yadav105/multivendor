@@ -73,6 +73,8 @@ use App\Http\Controllers\Vendor\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Vendor\OnboardingController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Customer\ReviewController;
+use App\Http\Controllers\Customer\OrderController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -170,6 +172,12 @@ Route::middleware(['auth', 'customer'])->prefix('customer')->name('customer.')->
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
     Route::post('/checkout/process', [CheckoutController::class, 'process'])->name('checkout.process');
     Route::get('/order/success/{orderNumber}', [CheckoutController::class, 'success'])->name('order.success');
+
+    // order & review
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+    Route::get('/review/{orderItem}', [ReviewController::class, 'create'])->name('review.create');
+    Route::post('/review/{orderItem}', [ReviewController::class, 'store'])->name('review.store');
 });
 
 require __DIR__ . '/auth.php';
