@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -6,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class OrderItem extends Model
 {
     protected $fillable = [
-        'order_id', 'product_id', 'vendor_id',
-        'quantity', 'price', 'status'
+        'order_id',
+        'product_id',
+        'vendor_id',
+        'quantity',
+        'price',
+        'status'
     ];
 
     public function product()
@@ -18,5 +23,10 @@ class OrderItem extends Model
     public function order()
     {
         return $this->belongsTo(Order::class);
+    }
+
+    public function review()
+    {
+        return $this->hasOne(Review::class);
     }
 }
