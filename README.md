@@ -11,7 +11,6 @@
 **A full-stack multi-vendor e-commerce platform built with Laravel 12, 
 Tailwind CSS, Stripe payments, and REST API.**
 
-[🌐 Live Demo](https://shopx.proactivetechnicalized.com/) · 
 
 </div>
 
@@ -79,7 +78,7 @@ Tailwind CSS, Stripe payments, and REST API.**
 | **Auth** | Laravel Breeze + Sanctum (API) |
 | **Payment** | Stripe |
 | **Storage** | Laravel Storage (Local/S3 ready) |
-| **Deploy** | Hostinger VPS |
+| **Deploy** | - |
 
 ---
 
@@ -209,15 +208,6 @@ routes/
 
 ---
 
-## 🌐 Deployment
-
-Deployed on **Hostinger** with:
-- PHP 8.2
-- MySQL 8
-- SSL Certificate (HTTPS)
-- Laravel production optimizations
-
----
 
 ## 📄 License
 
