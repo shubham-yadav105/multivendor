@@ -34,12 +34,12 @@
                     </div>
                 @endif
             </div>
-            @if($product->images->count() > 1)
+            @if($product->images->count() > 1) 
             <div class="grid grid-cols-5 gap-2">
                 @foreach($product->images as $image)
                 @if($image->image_path !== 'placeholder.jpg')
                 <button @click="active = '{{ $image->image_path }}'"
-                        :class="active === '{{ $image->image_path }}'
+                        :class="active === '{{  $image->image_path }}'
                             ? 'ring-2 ring-indigo-500 ring-offset-2'
                             : 'ring-1 ring-gray-200 hover:ring-indigo-300'"
                         class="aspect-square rounded-xl overflow-hidden transition">

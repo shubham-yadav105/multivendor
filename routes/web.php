@@ -151,6 +151,12 @@ Route::middleware(['auth', 'vendor'])->prefix('vendor')->name('vendor.')->group(
     // Products
     Route::resource('products', ProductController::class);
 
+    Route::delete('/products/{product}/images/{image}', [ProductController::class, 'deleteImage'])->name('products.images.delete');
+
+    Route::post('/products/{product}/images/{image}/primary', [ProductController::class, 'setPrimaryImage'])->name('products.images.primary');
+
+    Route::post('/products/{product}/images/reorder', [ProductController::class, 'reorderImages'])->name('products.images.reorder');
+
     // Orders
     Route::get('/orders', [VendorOrderController::class, 'index'])->name('orders.index');
     Route::post('/orders/{orderItem}/status', [VendorOrderController::class, 'updateStatus'])->name('orders.status');
